@@ -1,0 +1,212 @@
+  
+  .intro {
+    
+    height: 70vh;
+    width: 95vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #2e2e2e; 
+    z-index: 2;
+    position: relative;
+  }
+  
+  .intro h1 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  .intro p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 1rem 0;
+  }
+  
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    display: block;
+    background-color: #e6e6fa;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(230, 230, 250, 0.86),
+      #a878a8
+    );
+    z-index: 1; /* Ensure it's behind the text */
+  }
+  
+  .Button {
+    background-color: transparent;
+    color: #4b0082;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 2px solid #4b0082;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+  }
+  
+  .Button:hover {
+    background-color: #d8bfd8;
+    color: #c660c4;
+    border-color: #6a5acd;
+    transform: scale(1.05);
+  }
+  
+  .Button:active {
+    background-color: #c660c4;
+    border-color: #6a5acd;
+    transform: scale(0.98);
+  }
+  
+  .Button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(106, 90, 205, 0.5);
+  }
+
+
+
+  /* ======================================= */
+  .container {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .intro,
+  .info-form {
+    transition: opacity 0.5s ease;
+    opacity: 1;
+  }
+  
+  .fade-out {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards ease;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  
+  .svg-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .Button {
+    background-color: #6A5ACD; /* Soft purple */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .Button:hover {
+    background-color: #4B0082; /* Darker purple */
+    transform: scale(1.05);
+  }
+  
+  .Button:active {
+    transform: scale(0.95);
+  }
+  
+  /* Improved centering */
+  .info-form {
+    background: rgba(255, 255, 255, 0); /* Semi-transparent white */
+    border-radius: 15px; /* Smooth rounded corners */
+    padding: 25px 35px; /* Comfortable padding */
+    width: 450px; /* Fixed width for a uniform layout */
+    margin: auto; /* Center horizontally */
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Adjust centering */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  }
+  
+  .info-form h2 {
+    text-align: center;
+    color: #4B0082; /* Deep purple */
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .info-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .info-form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(106, 90, 205, 0.5); /* Soft purple border */
+    background: rgba(180, 90, 205, 0.356); /* Translucent field */
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .info-form input:focus {
+    border-color: #4B0082; /* Darker purple on focus */
+    box-shadow: 0 0 5px rgba(75, 0, 130, 0.5); /* Glow effect */
+    outline: none; /* Remove default outline */
+  }
+  
+  .info-form input::placeholder {
+    color: rgba(51, 51, 51, 0.6); 
+  }
+  
+  .info-form button {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    margin-top: 10px;
+    background: #cb5acd;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .info-form button:hover {
+    background-color: #820080;
+    transform: scale(1.05);
+  }
+  
+  .info-form button:active {
+    transform: scale(0.95);
+  }
+  

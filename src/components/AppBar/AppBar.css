@@ -1,0 +1,118 @@
+.app-bar {
+  background-color: #c989f7;
+  color: #2E2E2E;
+  display: flex;
+  align-items: center;  /* Vertically center the logo and nav links */
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo-link {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4B0082;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.logo-link:hover {
+  color: #6A5ACD;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;  /* Vertically center the nav links */
+  position: absolute;  /* Use absolute positioning */
+  right: 20px;  /* Align to the right side of the app bar */
+}
+
+.nav-link {
+  margin-left: 20px;
+  font-size: 1rem;
+  color: #4B0082;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.2s ease, background-color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #3b143b;
+  text-shadow: -2px 2px 5px rgba(97, 23, 116, 0.5);
+  transform: scale(1.1);
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.nav-link:active {
+  background-color: #c660c4;
+  transform: scale(0.98);
+}
+
+.nav-link:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(106, 90, 205, 0.5);
+}
+/* Mobile View (max-width: 768px) */
+@media (max-width: 768px) {
+  .app-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .logo-link {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .nav-links {
+    display: none; /* Hide the nav-links by default */
+    flex-direction: column; /* Stack the links vertically */
+    width: 100%;
+  }
+
+  .nav-links.open {
+    display: flex; /* Show the nav-links when the 'open' class is added */
+  }
+
+  .nav-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    width: 100%;
+    text-align: left;
+    padding: 8px 10px;
+    box-sizing: border-box;
+  }
+
+  .nav-link:hover {
+    background-color: #D8BFD8;
+    color: #4B0082;
+    padding-left: 15px;
+  }
+
+  .hamburger-menu {
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    z-index: 2000;
+  }
+
+  .hamburger-line {
+    width: 30px;
+    height: 3px;
+    background-color: #4B0082;
+    border-radius: 3px;
+  }
+}

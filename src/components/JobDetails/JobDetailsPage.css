@@ -1,0 +1,168 @@
+/* Global box-sizing for all elements to include padding and border in width/height */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Job Details Container */
+.job-details-container {
+  padding: 20px;
+  background-color: #f8f4ff;
+  color: #000000;
+  width: 100%; /* Ensure it doesn't overflow */
+  overflow: hidden; /* Prevents any content from overflowing */
+}
+
+/* Flexbox container for left and right halves */
+.job-details-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  flex-wrap: wrap; /* Ensures it wraps on smaller screens */
+  gap: 20px;
+}
+
+/* Left half - Job Info */
+.job-info {
+  flex: 1;
+  padding-right: 20px;
+  overflow-y: auto;
+}
+
+.job-info h1 {
+  font-size: 2rem;
+  color: #5a20cb;
+  margin-bottom: 15px;
+}
+
+.job-info p {
+  font-size: 1rem;
+  margin: 8px 0;
+  line-height: 1.6;
+}
+
+.job-info .requirements {
+  margin-top: 20px;
+}
+
+.job-info .requirements h3 {
+  font-size: 1.2rem;
+}
+
+.job-info .requirements ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+/* General Styling for Form */
+.application-form-wrapper {
+  background-color: #ad8eeb;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden; /* Prevent overflow */
+}
+
+.application-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* First and Last Name Fields in One Row */
+.name-fields {
+  display: flex;
+  gap: 20px;
+  width: 100%; /* Ensure full width */
+}
+
+.name-fields input {
+  flex: 1; /* Makes each input field take equal space */
+  padding: 1rem;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%; /* Ensure inputs don't overflow */
+  box-sizing: border-box; /* Include padding and border in width */
+}
+
+/* Other Input Fields Styling */
+.application-form label {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.application-form input,
+.application-form textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 1px;
+  width: 100%;
+  box-sizing: border-box; /* Prevent overflow */
+}
+
+.application-form textarea {
+  resize: vertical;
+}
+
+.submit-btn {
+  padding: 10px 20px;
+  background-color: #5a20cb; /* Lavender theme */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #7b2cbf;
+}
+
+.attachments label {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+
+
+
+
+.OR{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .application-form-wrapper {
+    padding: 15px;
+  }
+
+  .job-details-wrapper {
+    flex-direction: column;
+  }
+
+  .job-info,
+  .application-form-wrapper {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .application-form label {
+    font-size: 0.9rem;
+  }
+
+  .submit-btn,
+  .back-btn {
+    font-size: 0.9rem;
+  }
+}
